@@ -1,0 +1,3 @@
+C:\CMake\bin\cmake.exe -E rm -f CMakeFiles\Fotran_TEST_ONVSCODE.dir/objects.a
+C:\mingw64\bin\ar.exe qc CMakeFiles\Fotran_TEST_ONVSCODE.dir/objects.a @CMakeFiles\Fotran_TEST_ONVSCODE.dir\objects1.rsp
+C:\mingw64\bin\gfortran.exe -g -Wl,--whole-archive CMakeFiles\Fotran_TEST_ONVSCODE.dir/objects.a -Wl,--no-whole-archive -o Fotran_TEST_ONVSCODE.exe -Wl,--out-implib,libFotran_TEST_ONVSCODE.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

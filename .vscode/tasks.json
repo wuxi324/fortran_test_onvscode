@@ -1,0 +1,55 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        //task1: 创建build文件夹
+        {
+            "type":"shell",
+            "label": "CreateBuildDir",
+            "command":"mkdir",
+            "args": [
+                "-Force",
+                "build",
+            ],
+            "options": {
+                "cwd":"${workspaceRoot}",
+                "shell": {
+                    "executable": "powershell.exe"
+                }
+            },    
+        }, 
+        //task2: cmake
+        {
+            "type": "shell",
+            "label": "cmakeRun",
+            "command":"cmake",
+            "args": [
+                "-DCMAKE_MAKE_PROGRAM=C:\\mingw64\\bin\\mingw32-make.exe",
+                "-G",
+                "\\\"Unix Makefiles\\\"",
+                "../",
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "dependsOn":[
+                "CreateBuildDir"
+            ],
+
+        },
+        //task3:make编译
+        {
+            "type": "shell",
+            "label": "makeRun",
+            "command": "mingw32-make",
+            "args": [],
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "dependsOn":[
+                "cmakeRun",
+            ]     
+        },
+
+    ],
+    
+}

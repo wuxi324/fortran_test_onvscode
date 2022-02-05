@@ -1,0 +1,3 @@
+C:\CMake\bin\cmake.exe -E rm -f CMakeFiles\FORTRAN_TEST_ONVSCODE.dir/objects.a
+C:\mingw64\bin\ar.exe qc CMakeFiles\FORTRAN_TEST_ONVSCODE.dir/objects.a @CMakeFiles\FORTRAN_TEST_ONVSCODE.dir\objects1.rsp
+C:\mingw64\bin\gfortran.exe -g -Wl,--whole-archive CMakeFiles\FORTRAN_TEST_ONVSCODE.dir/objects.a -Wl,--no-whole-archive -o FORTRAN_TEST_ONVSCODE.exe -Wl,--out-implib,libFORTRAN_TEST_ONVSCODE.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
